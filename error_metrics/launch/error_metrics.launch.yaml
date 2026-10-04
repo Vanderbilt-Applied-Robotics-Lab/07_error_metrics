@@ -1,7 +1,4 @@
-launch:
-    - arg:
-        name: 'eps'
-        default: '1E-5'     
+launch:   
     - node:
         pkg: 'tf2_ros'
         exec: 'static_transform_publisher'
@@ -16,6 +13,5 @@ launch:
 
     - node:
         pkg: 'error_metrics'
-        exec: 'inv_kin_node'
-        name: 'inv_kin_node'
-        args: '$(var eps)'
+        exec: 'error_metrics_node'
+        name: 'error_metrics_node'
